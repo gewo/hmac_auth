@@ -1,5 +1,8 @@
 # HMACAuth
 
+[![Build Status](https://travis-ci.org/gewo/hmac_auth.png)](https://travis-ci.org/gewo/hmac_auth/)
+[![Code Coverage](https://coveralls.io/repos/gewo/hmac_auth/badge.png)](https://coveralls.io/r/gewo/hmac_auth)
+
 ```
     __  ____  ______   _________         __  __
    / / / /  |/  /   | / ____/   | __  __/ /_/ /_
