@@ -12,6 +12,7 @@ Gem::Specification.new do |gem|
   gem.summary       = 'Ruby gem providing HMAC based message signing and ' \
                       'verification. Without fancy Rails integration.'
   gem.homepage      = 'https://github.com/gewo/hmac_auth'
+  gem.license       = 'MIT'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map { |f| File.basename(f) }
