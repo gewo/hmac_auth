@@ -35,7 +35,7 @@ module HMACAuth
 
       def calculated_signature
         OpenSSL::HMAC.hexdigest(
-          OpenSSL::Digest::Digest.new('sha256'),
+          OpenSSL::Digest.new('sha256'),
           secret,
           deep_sort(params_without_signature).to_json)
       end
