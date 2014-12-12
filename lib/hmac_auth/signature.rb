@@ -37,7 +37,7 @@ module HMACAuth
         OpenSSL::HMAC.hexdigest(
           OpenSSL::Digest.new('sha256'),
           secret,
-          deep_sort(params_without_signature).to_json)
+          JSON.generate(deep_sort(params_without_signature)))
       end
 
       def deep_sort(hash)
