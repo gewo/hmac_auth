@@ -5,7 +5,7 @@ require 'hmac_auth/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'hmac_auth'
-  gem.version       = HmacAuth::VERSION
+  gem.version       = HMACAuth::VERSION
   gem.authors       = ['Gebhard Wöstemeyer']
   gem.email         = ['g.woestemeyer@gmail.com']
   gem.description   = 'HMAC based message signing and verification'

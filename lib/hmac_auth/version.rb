@@ -1,4 +1,4 @@
 # coding: utf-8
-module HmacAuth
+module HMACAuth
   VERSION = '0.1.2'
 end
