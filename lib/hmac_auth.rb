@@ -11,7 +11,8 @@ require 'hmac_auth/signature'
 module HMACAuth
   mattr_accessor :secret,
     :reject_keys,
-    :valid_for
+    :valid_for,
+    :keep_values_type
 
   # The shared secret.
   self.secret = nil
@@ -22,4 +23,6 @@ module HMACAuth
   # Time the signature is valid when verifying
   self.valid_for = 15.minutes
 
+  # Don't convert the values to String
+  self.keep_values_type = false
 end

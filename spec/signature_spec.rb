@@ -63,6 +63,37 @@ module HMACAuth
           signature(hasha).should == signature(hashd)
         end
       end
+
+      context 'when keep_values_type is true' do
+        describe 'hash' do
+          subject do
+            HMACAuth::Signature.sign(
+              params,
+              secret: secret,
+              keep_values_type: true
+            )
+          end
+
+          it { expect(subject).to be_a Hash }
+          it { expect(subject['signature']).to be_a String }
+          it { expect(subject['timestamp']).to be }
+          it { expect(subject['b']).to be_a Integer }
+
+          context 'nested hash' do
+            subject do
+              HMACAuth::Signature.sign(
+                params,
+                secret: secret,
+                keep_values_type: true
+              )['a']
+            end
+
+            it { expect(subject).to be_a Hash }
+            it { expect(subject['d']).to eq 4 }
+            it { expect(subject['c']).to eq 3 }
+          end
+        end
+      end
     end
   end
 end
