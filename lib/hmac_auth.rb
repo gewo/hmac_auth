@@ -23,6 +23,6 @@ module HMACAuth
   # Time the signature is valid when verifying
   self.valid_for = 15.minutes
 
-  # Don't convert the values to String
+  # Keep or not the values type when signing
   self.keep_values_type = false
 end
