@@ -21,9 +21,10 @@ fancy Rails integration.
 ## Usage
 
     # Configuration
-    HMACAuth.secret      = 't0p_s3cr3!!eins1'
-    HMACAuth.reject_keys = %w(action controller format)
-    HMACAuth.valid_for   = 15.minutes
+    HMACAuth.secret           = 't0p_s3cr3!!eins1'
+    HMACAuth.reject_keys      = %w(action controller format)
+    HMACAuth.valid_for        = 15.minutes
+    HMACAuth.keep_values_type = false
 
     to_be_signed = {
       b: 2,
